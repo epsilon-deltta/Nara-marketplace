@@ -73,7 +73,7 @@ class Ui_MWin(object):
         self.layout1T1.addWidget(self.search)
         self.download = QtWidgets.QPushButton(self.tab1)
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setPointSize(10)   
         self.download.setFont(font)
         self.download.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         icon2 = QtGui.QIcon()
@@ -293,29 +293,33 @@ class Ui_MWin(object):
     def retranslateUi(self, MWin):
         _translate = QtCore.QCoreApplication.translate
         MWin.setWindowTitle(_translate("MWin", "나라장터"))
+
         self.lineEdit_input.setPlaceholderText(_translate("MWin", "Enter keyword"))
         self.search.setText(_translate("MWin", "search"))
-        self.download.setText(_translate("MWin", "download"))
+        self.download.setText(_translate("MWin", "report"))
         item = self.tableWidget.verticalHeaderItem(0)
-        item.setText(_translate("MWin", "av号"))
+        item.setText(_translate("MWin", "공고명"))
         item = self.tableWidget.verticalHeaderItem(1)
-        item.setText(_translate("MWin", "标题"))
+        item.setText(_translate("MWin", "추정가격"))
         item = self.tableWidget.verticalHeaderItem(2)
-        item.setText(_translate("MWin", "发布时间"))
+        item.setText(_translate("MWin", "게약방법"))
         item = self.tableWidget.verticalHeaderItem(3)
-        item.setText(_translate("MWin", "UP主"))
+        item.setText(_translate("MWin", "진행현황"))
         item = self.tableWidget.verticalHeaderItem(4)
-        item.setText(_translate("MWin", "分类"))
+        item.setText(_translate("MWin", "순위"))
         item = self.tableWidget.verticalHeaderItem(5)
-        item.setText(_translate("MWin", "封面"))
+        item.setText(_translate("MWin", "업체명"))
         item = self.tableWidget.verticalHeaderItem(6)
-        item.setText(_translate("MWin", "弹幕"))
+        item.setText(_translate("MWin", "점수"))
         item = self.tableWidget.verticalHeaderItem(7)
-        item.setText(_translate("MWin", "稿件描述"))
+        item.setText(_translate("MWin", "입찰금액"))
+        
         __sortingEnabled = self.tableWidget.isSortingEnabled()
         self.tableWidget.setSortingEnabled(False)
         self.tableWidget.setSortingEnabled(__sortingEnabled)
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab1), _translate("MWin", "首页"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab1), _translate("MWin", "검색"))
+
+
         self.startAll.setText(_translate("MWin", "全部开始"))
         self.pauseAll.setText(_translate("MWin", "全部暂停"))
         self.clearAll.setText(_translate("MWin", "清空全部"))
@@ -330,6 +334,8 @@ class Ui_MWin(object):
         item = self.downloadWidget.horizontalHeaderItem(3)
         item.setText(_translate("MWin", "进度"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab2), _translate("MWin", "下载"))
+    
+    
         self.info.setPlainText(_translate("MWin", "GitHub：LewisTian\n"
 "Email：lewissmith@126.com\n"
 "详细介绍：https://github.com/LewisTian/PyQt5-Apps/tree/master/bilibili-kit\n"
@@ -347,6 +353,8 @@ class Ui_MWin(object):
 "若是想下载高清的视频，需要先保存cookie\n"
 ""))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab3), _translate("MWin", "关于"))
+
+
         self.label_pay.setText(_translate("MWin", "若是你觉得好用欢迎投喂ο(=•ω＜=)ρ⌒☆"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab4), _translate("MWin", "投喂"))
 
